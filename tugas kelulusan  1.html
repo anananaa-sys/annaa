@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>keterangan kelulusan </h2>
+
+    <label for="nilai">nilai:</label><br />
+    <input type="number" id="nilai" name="nilai" /><br />
+    <label for="tidakhadir">tidakhadir:</label><br />
+    <input type="number" id="tidakhadir" name="tidakhadir" /><br />
+    <button onclick="hasil()">hasil</button>
+
+    <script>
+      function hasil() {
+        // Ambil nilai dari penginputan 
+        let nilai = parseFloat(document.getElementById("nilai").value);
+        let tidakhadir = parseFloat(document.getElementById("tidakhadir").value);
+        
+        
+       // Logika kelulusan menggunakan AND
+            if (nilai > 75 && tidakhadir < 5) {
+                alert("Anda lulus.");
+            } else {
+                alert("Anda tidak lulus.");
+            }
+      
+    }
+    
+    </script>
+    
+  </body>
+</html>
